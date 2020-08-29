@@ -1,0 +1,9 @@
+[Unit]
+Description=systemd service for node exporter
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/node_exporter-1.0.1.linux-amd64/node_exporter
+
+[Install]
+WantedBy=multi-user.target

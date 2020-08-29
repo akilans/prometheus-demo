@@ -1,0 +1,9 @@
+[Unit]
+Description=systemd service for prometheus server
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/prometheus-2.20.1.linux-amd64/prometheus --config.file=/vagrant/prometheus-setup/prometheus.yml
+
+[Install]
+WantedBy=multi-user.target
