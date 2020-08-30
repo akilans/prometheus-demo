@@ -1,0 +1,9 @@
+[Unit]
+Description=systemd service for Alert Manager
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/alertmanager-0.21.0.linux-amd64/alertmanager --config.file=/vagrant/prometheus-setup/alertmanager.yml
+
+[Install]
+WantedBy=multi-user.target
